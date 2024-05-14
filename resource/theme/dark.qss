@@ -1,0 +1,911 @@
+/* 首页容器 背景颜色 */
+QWidget[MainWindowWidgets="Container"]{
+background-color: #f0f0f0;
+}
+/* 首页标题栏 背景颜色 */
+HomeTitleBar{
+qproperty-TitleBarBackgroundColor: #404142;
+}
+/* 首页标题栏 窗口按钮 常规状态 */
+QPushButton[WindowButton="NoCloseButton"]{
+min-width: 50px;
+max-width: 50px;
+min-height: 30px;
+max-height: 30px;
+border: none;
+background-color: #404142;
+}
+QPushButton[WindowButton="CloseButton"]{
+min-width: 50px;
+max-width: 50px;
+min-height: 30px;
+max-height: 30px;
+border: none;
+background-color: #404142;
+}
+/* 首页标题栏 窗口按钮 悬停状态 */
+QPushButton[WindowButton="NoCloseButton"]:hover{
+background-color: #d2d2d2;
+}
+QPushButton[WindowButton="CloseButton"]:hover{
+background-color: #e81123;
+}
+/* 首页标题栏 页面标签 */
+HomeTitleBar #HomeTitleBar_labPageName{
+border: none;
+padding: 5px 20px 5px 20px;
+color: #d2d2d2;
+font: 700 12pt "Microsoft YaHei UI";
+}
+/* 首页标题栏 新建作品按钮 */
+HomeTitleBar #HomeTitleBar_btnNewNovel{
+width: 100px;
+height: 36px;
+border-radius: 18px;
+background-color: #d2d2d2;
+color: #404142;
+}
+/* 首页标题栏 功能按钮 */
+QPushButton[WidgetStyleClass="HomeTitleBar_PageButton"]{
+width: 75px;
+height: 30px;
+border: none;
+background-color: #404142;
+color: #d2d2d2;
+font: 10pt "Microsoft YaHei UI";
+}
+/* 首页导航栏 */
+HomeNavigationBar{
+qproperty-HomeNavigationBarBackgroundColor: #d2d2d2;
+}
+/* 首页导航栏 按钮  常规状态 */
+HomeNavigationBar QPushButton[NavigationBarButton="NavigationBarButton"]{
+border: none;
+padding: 15px 80px 15px 5px;
+background-color: #d2d2d2;
+color: #969696;
+font: 12pt "Microsoft YaHei UI";
+text-align: right;
+}
+/* 首页导航栏 按钮  勾选、勾选加悬停状态 */
+HomeNavigationBar QPushButton[NavigationBarButton="NavigationBarButton"]:checked,
+HomeNavigationBar QPushButton[NavigationBarButton="NavigationBarButton"]:checked:hover{
+border-style: solid;
+border-color: #404142;
+border-width: 0px 0px 0px 5px;;
+padding: 15px 80px 15px 0px;
+background-color: #bfbfbf;
+color: #404142;
+font: 700 "Microsoft YaHei UI";
+text-align: right;
+}
+/* 首页导航栏 按钮  悬停状态 */
+HomeNavigationBar QPushButton[NavigationBarButton="NavigationBarButton"]:hover{
+border: none;
+padding: 15px 80px 15px 5px;
+background-color: #bfbfbf;
+color: #404142;
+font: 700 "Microsoft YaHei UI";
+text-align: right;
+}
+/* 首导航栏 按钮 图标变化 */
+HomeNavigationBar #HomeNavigationBar_btnHome{
+image: url(":/image/home - gray.png");
+image-position: center;
+}
+HomeNavigationBar #HomeNavigationBar_btnHome:checked,
+HomeNavigationBar #HomeNavigationBar_btnHome:hover{
+image: url(":/image/home - black.png");
+image-position: center;
+}
+HomeNavigationBar #HomeNavigationBar_btnFind{
+image: url(":/image/find - gray.png");
+image-position: center;
+}
+HomeNavigationBar #HomeNavigationBar_btnFind:checked,
+HomeNavigationBar #HomeNavigationBar_btnFind:hover{
+image: url(":/image/find - black.png");
+image-position: center;
+}
+HomeNavigationBar #HomeNavigationBar_btnRecycle{
+image: url(":/image/recycle - gray.png");
+image-position: center;
+}
+HomeNavigationBar #HomeNavigationBar_btnRecycle:checked,
+HomeNavigationBar #HomeNavigationBar_btnRecycle:hover{
+image: url(":/image/recycle - black.png");
+image-position: center;
+}
+/* 首页工作区首页 容器 */
+QWidget[HomeWorkspaceWidgets="Container"]{
+background-color: #26313e;
+}
+/* 首页工作区首页 垂直滚动条 槽*/
+QScrollArea[HomeWorkspaceWidgets="ScrollArea"] QScrollBar:vertical,
+TextEditWorkspacePage QScrollBar:vertical,
+RestoreHistoricalVersionDialog QScrollBar:vertical{
+width: 10px;
+padding: 0px;
+background: #26313e;
+}
+/* 垂直滚动条 滑块 */
+QScrollArea[HomeWorkspaceWidgets="ScrollArea"] QScrollBar::handle:vertical,
+TextEditWorkspacePage QScrollBar::handle:vertical,
+RestoreHistoricalVersionDialog QScrollBar::handle:vertical{
+min-height: 100px;
+border-radius: 5px;
+background: #404142;
+}
+/* 垂直滚动条 滑块 光标悬停 */
+QScrollArea[HomeWorkspaceWidgets="ScrollArea"] QScrollBar::handle:vertical:hover,
+TextEditWorkspacePage QScrollBar::handle:vertical:hover,
+RestoreHistoricalVersionDialog QScrollBar::handle:vertical:hover{
+background: #ffffff;
+}
+/* 垂直滚动条 滑块 光标按下 */
+QScrollArea[HomeWorkspaceWidgets="ScrollArea"] QScrollBar::handle:vertical:pressed,
+TextEditWorkspacePage QScrollBar::handle:vertical:pressed,
+RestoreHistoricalVersionDialog QScrollBar::handle:vertical:pressed{
+background: #ffffff;
+}
+/* 划过的槽 */
+QScrollArea[HomeWorkspaceWidgets="ScrollArea"] QScrollBar::sub-page:vertical,
+TextEditWorkspacePage QScrollBar::sub-page:vertical,
+RestoreHistoricalVersionDialog QScrollBar::sub-page:vertical{
+background: none;
+}
+/* 未划过的槽 */
+QScrollArea[HomeWorkspaceWidgets="ScrollArea"] QScrollBar::add-page:vertical,
+TextEditWorkspacePage QScrollBar::add-page:vertical,
+RestoreHistoricalVersionDialog QScrollBar::add-page:vertical{
+background: none;
+}
+/* 在QScrollBar中跳转上一行的按钮 */
+QScrollArea[HomeWorkspaceWidgets="ScrollArea"] QScrollBar::sub-line:vertical,
+TextEditWorkspacePage QScrollBar::sub-line:vertical,
+RestoreHistoricalVersionDialog QScrollBar::sub-line:vertical{
+background: none;
+}
+/* 在QScrollBar中跳转下一行的按钮 */
+QScrollArea[HomeWorkspaceWidgets="ScrollArea"] QScrollBar::add-line:vertical,
+TextEditWorkspacePage QScrollBar::add-line:vertical,
+RestoreHistoricalVersionDialog QScrollBar::add-line:vertical{
+background: none;
+}
+/* 小说控件 设置标签关键字 颜色*/
+NovelWidget{
+qproperty-NovelWidgetLabelKeyWordsColor: #f9e501;
+}
+QLabel[WidgetStyleClass="NovelWidget_TitleLabel"]{
+color: #bfbfbf;
+font: 700 20px "Microsoft YaHei UI";
+}
+QLabel[WidgetStyleClass="NovelWidget_AuthorLabel"]{
+color: #bfbfbf;
+font: 400 16px "Microsoft YaHei UI";
+}
+QLabel[WidgetStyleClass="NovelWidget_InfoLabel"]{
+color: #f5f6f9;
+}
+/* 设置页面 子页面容器 标题标签 */
+QFrame#HomeWorkspaceSettingsPage_frmThemeContainer{
+border-style: solid;
+border-radius: 5px;
+background-color: #404142;
+}
+QLabel[WidgetStyleClass="HomeWorkspaceSettingsPage_TitleLabel"]{
+color: #d2d2d2;
+font: 700 30px "Microsoft YaHei UI";
+}
+/* 主题勾选按钮 */
+ThemeTickButton{
+qproperty-TickButtonBorderColor: #f0f0f0;
+}
+/* 关于标签 */
+QLabel[HomeAboutPageWidgets="TitleLabel"]{
+padding: 10px 0px 10px 0px;
+color: #d2d2d2;
+font: 700 24px "Microsoft YaHei UI";
+}
+QLabel[HomeAboutPageWidgets="TextLabel"]{
+padding: 10px 0px 10px 0px;
+color: #d2d2d2;
+font: 400 16px "Microsoft YaHei UI";
+}
+QPushButton[HomeAboutPageWidgets="Button"]{
+border: none;
+color: #d2d2d2;
+font: 700 16px "Microsoft YaHei UI";
+}
+QFrame[HomeAboutPageWidgets="Line"]{
+height: 1px;
+color: #cdcdcd;
+}
+QLabel[HomeAboutPageWidgets="URLLabel"]{
+padding: 10px 0px 10px 0px;
+color: #d2d2d2;
+font: 400 16px "Microsoft YaHei UI";
+}
+QFrame[WidgetStyleClass="ContainerFrame"]{
+background-color: #26313e;
+}
+/* 新建编辑小说对话框 */
+QFrame[WidgetStyleClass="DialogContainerFrame"]{
+border-radius: 20px;
+background-color: #26313e;
+}
+QLabel[WidgetStyleClass="DialogTitleLabel"]{
+color: #d2d2d2;
+font: 700 24px "Microsoft YaHei UI";
+}
+QFrame#ModifyNovelDialog_frmCoverContainer{
+background-color: #26313e;
+}
+QPushButton#ModifyNovelDialog_btnCancelCover{
+border: none;
+}
+QLabel[WidgetStyleClass="ModifyNovelDialog_InfoLabel"]{
+padding:3px 0px 5px 0px;
+border: none;
+color: #d2d2d2;
+font: 400 20px "Microsoft YaHei UI";
+}
+QLineEdit[WidgetStyleClass="ModifyNovelDialog_InfoLineEdit"]{
+padding:3px 0px 5px 0px;
+border-style:solid;
+border-width:0px 0px 1px 0px;
+border-color: #d2d2d2;
+background-color: #26313e;
+color: #d2d2d2;
+font: 400 20px "Microsoft YaHei UI";
+}
+QPushButton[WidgetStyleClass="CancelButton"]{
+padding: 3px 10px 3px 10px;
+border-style: solid;
+border-radius: 3px;
+border-width: 2px 2px 2px 2px;
+border-color: #d2d2d2;
+color: #d2d2d2;
+font: 400 18px "Microsoft YaHei UI";
+}
+QPushButton[WidgetStyleClass="CancelButton"]:hover{
+background-color: #404142;
+}
+QPushButton[WidgetStyleClass="SureButton"]{
+padding: 3px 10px 3px 10px;
+border-style: solid;
+border-radius: 3px;
+border-width: 2px 2px 2px 2px;
+border-color: #404142;
+background-color: #404142;
+color: #ffffff;
+font: 400 18px "Microsoft YaHei UI";
+}
+QPushButton[WidgetStyleClass="SureButton"]:hover{
+border-color: #d2d2d2;
+background-color: #d2d2d2;
+}
+/* 编辑工作区 空白页 */
+HomeWorkspace BlankPage{
+qproperty-BlankPageBackgroundColor: #26313e;
+}
+HomeWorkspace QLabel[WidgetStyleClass="BlankPage_ImageLabel"]{
+min-height: 80px;
+max-height: 80px;
+image: url(":/image/blank - gray.png");
+image-position: center;
+background-color: #26313e;
+}
+HomeWorkspace QLabel[WidgetStyleClass="BlankPage_TipsLabel"]{
+background-color: #26313e;
+color: #abacae;
+font: 700 20px "Microsoft YaHei UI";
+}
+/* 首页回收站页面 */
+HomeWorkspaceRecyclePage{
+qproperty-HomeRecyclePageBackgroundColor: #26313e;
+}
+QPushButton#HomeWorkspaceRecyclePage_btnClear{
+padding: 10px 15px 10px 15px;
+border: none;
+background-color: #26313e;
+color: #bfbfbf;
+font: 700 16px "Microsoft YaHei UI";
+}
+RecycleBin{
+qproperty-RecycleBinBackgroundColor: #26313e;
+}
+RecycleBinTitleBar{
+qproperty-RecycleBinTitleBarBackgroundColor: #26313e;
+qproperty-RecycleBinTitleBarLineColor: #cdcdcd;
+}
+QCheckBox#RecycleBinTitleBar_ckbSelect::indicator,
+QCheckBox[WidgetStyleClass="RecycledWork_SelectCheckBox"]::indicator{
+width: 25px;
+height: 25px;
+}
+QCheckBox#RecycleBinTitleBar_ckbSelect::indicator:unchecked,
+QCheckBox[WidgetStyleClass="RecycledWork_SelectCheckBox"]::indicator:unchecked{
+image: url(":/image/checkbox_unchecked - gray.png");
+}
+QCheckBox#RecycleBinTitleBar_ckbSelect::indicator:checked,
+QCheckBox[WidgetStyleClass="RecycledWork_SelectCheckBox"]::indicator:checked{
+image: url(":/image/checkbox_checked - gray.png");
+}
+QCheckBox#RecycleBinTitleBar_ckbSelect::indicator:indeterminate{
+image: url(":/image/checkbox_parcial - gray.png");
+}
+QLabel[WidgetStyleClass="RecycleBin_HeadLabel"]{
+padding: 0px 5px 0px 5px;
+border: none;
+color: #bfbfbf;
+font: 700 20px "Microsoft YaHei UI";
+}
+RecycledWork{
+qproperty-RecycledWorkBackgroundColor: #26313e;
+qproperty-RecycledWorkHoverBackgroundColor: #1c1d24;
+qproperty-RecycledWorkLineColor: #cdcdcd;
+}
+QLabel[WidgetStyleClass="RecycledWork_TitleLabel"]{
+padding: 0px 5px 0px 5px;
+border: none;
+color: #bfbfbf;
+font: 700 18px "Microsoft YaHei UI";
+}
+QLabel[WidgetStyleClass="RecycledWork_ContentLabel"]{
+padding: 0px 5px 0px 5px;
+border: none;
+color: #bfbfbf;
+font: 400 18px "Microsoft YaHei UI";
+}
+RecycleStatusBar{
+qproperty-RecycleStatusBarBackgroundColor: #26313e;
+qproperty-RecycleStatusBarLineColor: #cdcdcd;
+}
+QLabel#RecycleStatusBar_labSelectedCount{
+color: #bfbfbf;
+font: 700 16px "Microsoft YaHei UI";
+}
+QPushButton#RecycleStatusBar_btnRestore{
+min-width: 130px;
+max-width: 130px;
+min-height: 42px;
+max-height: 42px;
+border: none;
+border-radius: 21px;
+background-color: #404142;
+color: #ffffff;
+font: 700 16px "Microsoft YaHei UI";
+}
+QPushButton#RecycleStatusBar_btnDelete{
+min-width: 130px;
+max-width: 130px;
+min-height: 42px;
+max-height: 42px;
+border: none;
+border-radius: 21px;
+background-color: #e81123;
+color: #ffffff;
+font: 700 16px "Microsoft YaHei UI";
+}
+/* 编辑页标题栏 背景颜色 */
+EditTitleBar{
+qproperty-TitleBarBackgroundColor: #404142;
+}
+QLabel#EditTitleBar_labTitle{
+color: #ffffff;
+font: 400 20px "Microsoft YaHei UI";
+}
+/* 编辑页面 工具栏 */
+EditToolBar{
+qproperty-EditToolBarBackgroundColor: #404142;
+}
+QToolButton[WidgetStyleClass="EditToolBar_ToolButton"]{
+min-width: 65px;
+max-width: 65px;
+min-height: 55px;
+max-height: 55px;
+padding: 2px 0px 3px 0px;
+border: none;
+qproperty-iconSize: 20px 20px;
+background-color: #404142;
+color: #dfefde;
+font: 400 14px "Microsoft YaHei UI";
+}
+QToolButton[WidgetStyleClass="EditToolBar_ToolButton"]:hover{
+padding: 2px 0px 3px 0px;
+border: none;
+background-color: #bfbfbf;
+color: #ffffff;
+font: 700 14px "Microsoft YaHei UI";
+}
+QToolButton[WidgetStyleClass="EditToolBar_ToolButton"]:checked{
+padding: 2px 0px 0px 0px;
+border: solid;
+border-width: 0px 0px 3px 0px;
+border-color: #ffffff;
+background-color: #404142;
+color: #ffffff;
+font: 700 14px "Microsoft YaHei UI";
+}
+QToolButton[WidgetStyleClass="EditToolBar_ToolButton"]:checked:hover{
+padding: 2px 0px 0px 0px;
+border: solid;
+border-width: 0px 0px 3px 0px;
+border-color: #ffffff;
+background-color: #bfbfbf;
+color: #ffffff;
+font: 700 14px "Microsoft YaHei UI";
+}
+QToolButton#EditToolBar_tbtnNovelShelf{
+qproperty-icon: url(:/image/left arrow - gray.png) off, url(:/image/left arrow - white.png) on;
+}
+QToolButton#EditToolBar_tbtnDirectory{
+qproperty-icon: url(:/image/catalogue - gray.png) off, url(:/image/catalogue - white.png) on;
+}
+QToolButton#EditToolBar_tbtnUndo{
+qproperty-icon: url(:/image/undo - gray.png) off, url(:/image/undo - white.png) on;
+}
+QToolButton#EditToolBar_tbtnRedo{
+qproperty-icon: url(:/image/redo - gray.png) off, url(:/image/redo - white.png) on;
+}
+QToolButton#EditToolBar_tbtnTypesetting{
+qproperty-icon: url(:/image/typesetting - gray.png) off, url(:/image/typesetting - white.png) on;
+}
+QToolButton#EditToolBar_tbtnFindReplace{
+qproperty-icon: url(:/image/replace - gray.png) off, url(:/image/replace - white.png) on;
+}
+QToolButton#EditToolBar_tbtnTheme{
+qproperty-icon: url(:/image/theme - gray.png) off, url(:/image/theme - white.png) on;
+}
+QToolButton#EditToolBar_tbtnFont{
+qproperty-icon: url(:/image/font - gray.png) off, url(:/image/font - white.png) on;
+}
+QToolButton#EditToolBar_tbtnLayout{
+qproperty-icon: url(:/image/layout - gray.png) off, url(:/image/layout - white.png) on;
+}
+QToolButton#EditToolBar_tbtnHistoricalVersion{
+qproperty-icon: url(:/image/history - gray.png) off, url(:/image/history - white.png) on;
+}
+QToolButton#EditToolBar_tbtnMoreSettings{
+qproperty-icon: url(:/image/settings - gray.png) off, url(:/image/settings - white.png) on;
+}
+/* 目录栏 */
+EditCatalogBar{
+qproperty-EditCatalogBarBackgroundColor: #d2d2d2;
+}
+QPushButton[WidgetStyleClass="EditCatalogBar_DirectoryButton"]{
+padding: 0px 0px 4px 0px;
+border-style: solid;
+background-color: #d2d2d2;
+font: 400 18px "Microsoft YaHei UI";
+}
+QPushButton[WidgetStyleClass="EditCatalogBar_DirectoryButton"]:checked{
+padding: 0px 0px 2px 0px;
+border-style: solid;
+border-width: 0px 0px 2px 0px;
+border-color: #404142;
+background-color: #d2d2d2;
+color: #404142;
+font: 700 18px "Microsoft YaHei UI";
+}
+QPushButton#EditCatalogBar_btnSort{
+min-width: 20px;
+max-width: 20px;
+min-height: 20px;
+max-height: 20px;
+border: none;
+background-color: #ffffff;
+image: url(":/image/sort - black.png");
+image-position: center;
+}
+QPushButton#EditCatalogBar_btnSort:hover{
+min-width: 20px;
+max-width: 20px;
+min-height: 20px;
+max-height: 20px;
+border: none;
+background-color: #1bb28b;
+image: url(":/image/sort - white.png");
+image-position: center;
+}
+/* 目录树、目录列表，继承自QTreeWidget，可以直接使用background */
+DirectoryTreeWidget, DirectoryListWidget{
+background-color: #d2d2d2;
+}
+/* 重命名 分卷章节 对话框 */
+QLineEdit[WidgetStyleClass="RenameDirectoryItemDialog_TitleLineEdit"]{
+padding:3px 0px 5px 0px;
+border-style:solid;
+border-width:0px 0px 1px 0px;
+border-color: #d2d2d2;
+background-color: #26313e;
+color: #d2d2d2;
+font: 400 20px "Microsoft YaHei UI";
+}
+/* 查找栏 */
+FindBar{
+qproperty-FindBarBackgroundColor: #d2d2d2;
+qproperty-FindBarLineColor: #26313e;
+}
+QLineEdit#FindBar_ledFind{
+padding-left: 13px;
+border-style: solid;
+border-width: 1px 0px 1px 1px;
+border-top-left-radius: 15px;
+border-top-right-radius: 0px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 0px;
+border-color: #404142;
+background-color: #d2d2d2;
+}
+QPushButton#FindBar_btnFind{
+padding: 3px 3px 3px 3px;
+border-style: solid;
+border-width: 1px 1px 1px 0px;
+border-top-left-radius: 0px;
+border-top-right-radius: 15px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 15px;
+border-color: #404142;
+background-color: #404142;
+}
+QPushButton[WidgetStyleClass="FindBar_SquareButton"]{
+padding: 3px 3px 3px 3px;
+border-style: solid;
+border-radius: 3px;
+border-width: 1px 1px 1px 1px;
+border-color: #404142;
+}
+QPushButton[WidgetStyleClass="FindBar_SquareButton"]:hover{
+border-style:solid;
+border-radius:3px;
+border-width: 1px 1px 1px 1px;
+border-color: #404142;
+background-color: #404142;
+}
+SwitchButton#FindBar_swbtnReplaceVisible,
+SwitchButton[WidgetStyleClass="SideBarSettingPage_SwitchButton"]{
+qproperty-SwitchButtonGrooveColorOff: #f5f6f9;
+qproperty-SwitchButtonGrooveColorOn: #404142;
+
+qproperty-SwitchButtonSliderColorOff: #7a7a7a;
+qproperty-SwitchButtonSliderColorOn: #ffffff;
+
+qproperty-SwitchButtonTextColorOff: #404142;
+qproperty-SwitchButtonTextColorOn: #ffffff;
+}
+/* 按钮图标 */
+QPushButton#FindBar_btnFind{
+image: url(":/image/hair mirror - white.png");
+image-position: center;
+}
+QPushButton#FindBar_btnFindPrevious{
+image: url(":/image/up arrow - black.png");
+image-position: center;
+}
+QPushButton#FindBar_btnFindNext{
+image: url(":/image/down arrow - black.png");
+image-position: center;
+}
+/* 替换栏 */
+ReplaceBar{
+qproperty-ReplaceBarBackgroundColor: #d2d2d2;
+qproperty-ReplaceBarLineColor: #26313e;
+}
+QLineEdit#ReplaceBar_ledReplace{
+padding-left: 13px;
+border-style: solid;
+border-width: 1px 1px 1px 1px;
+border-radius: 15px 15px 15px 15px;
+border-color: #404142;
+background-color: #d2d2d2;
+}
+QPushButton[WidgetStyleClass="ReplaceBar_ReplaceButton"]{
+border-style: solid;
+border-radius: 3px;
+border-width: 1px 1px 1px 1px;
+border-color: #404142;
+background-color: #d2d2d2;
+}
+QPushButton[WidgetStyleClass="ReplaceBar_ReplaceButton"]:hover{
+border-style:solid;
+border-radius:3px;
+border-width: 1px 1px 1px 1px;
+border-color: #404142;
+background-color: #404142;
+}
+/* 编辑工作区 空白页 */
+EditWorkspace BlankPage{
+qproperty-BlankPageBackgroundColor: #26313e;
+}
+EditWorkspace QLabel[WidgetStyleClass="BlankPage_ImageLabel"]{
+min-height: 80px;
+max-height: 80px;
+image: url(":/image/file - gray.png");
+image-position: center;
+background-color: #26313e;
+}
+EditWorkspace QLabel[WidgetStyleClass="BlankPage_TipsLabel"]{
+background-color: #26313e;
+color: #abacae;
+font: 700 20px "Microsoft YaHei UI";
+}
+/* 编辑工作区 文本编辑页 */
+TextEditWorkspacePage{
+qproperty-TextEditWorkspacePageBackgroundColor: #26313e;
+}
+QLineEdit#TextEditWorkspacePage_ledWorkingTexTitle{
+padding: 10px 10px 10px 10px;
+border: none;
+background-color: #26313e;
+color: #abacae;
+}
+QTextEdit#TextEditWorkspacePage_tedWorkingTexContent{
+border: none;
+background-color: #26313e;
+color: #abacae;
+}
+/* 状态栏 */
+EditStatusBar{
+qproperty-EditStatusBarBackgroundColor: #26313e;
+qproperty-EditStatusBarLineColor: #cdcdcd;
+}
+QLabel#EditStatusBar_labWordCount{
+background-color: #26313e;
+color: #26313e;
+font: 400 18px "Microsoft YaHei UI";
+}
+/* 侧边栏 */
+QLabel[WidgetStyleClass="SiderBarPage_TitleLabel"]{
+min-height: 20px;
+max-height: 20px;
+background-color: #d2d2d2;
+color: #000000;
+font: 700 16px "Microsoft YaHei UI";
+}
+QPushButton[WidgetStyleClass="SiderBarPage_CloseButton"]{
+padding: 6px 6px 6px 6px;
+min-width: 15px;
+max-width: 15px;
+min-height: 15px;
+max-height: 15px;
+border: none;
+background-color: #d2d2d2;
+image: url(":/image/close window - black.png");
+image-position: center;
+}
+QPushButton[WidgetStyleClass="SiderBarPage_CloseButton"]:hover{
+padding: 6px 6px 6px 6px;
+min-width: 15px;
+max-width: 15px;
+min-height: 15px;
+max-height: 15px;
+border: none;
+background-color: #e81123;
+image: url(":/image/close window - white.png");
+image-position: center;
+}
+/* 侧边栏 容器 */
+QFrame[WidgetStyleClass="SiderBarPage_ContainerFrame"]{
+background-color: #d2d2d2;
+}
+/* 侧边栏 主题页面*/
+SideBarThemePage{
+qproperty-SiderBarPageBackgroundColor: #d2d2d2;
+}
+/* 侧边栏 字体页面*/
+SideBarFontPage{
+qproperty-SiderBarPageBackgroundColor: #d2d2d2;
+}
+QLabel[WidgetStyleClass="SideBarFontPage_ChildTitleLabel"]{
+background-color: #d2d2d2;
+color: #404142;
+font: 400 16px "Microsoft YaHei UI";
+}
+QFontComboBox[WidgetStyleClass="SideBarFontPage_FamilyComboBox"]{
+min-height: 30px;
+max-height: 30px;
+border-style: solid;
+border-width: 1px 1px 1px 1px;
+border-radius: 5px;
+border-color: #404142;
+background-color: #d2d2d2;
+}
+QComboBox[WidgetStyleClass="SideBarFontPage_SizeComboBox"]{
+min-height: 30px;
+max-height: 30px;
+border-style: solid;
+border-width: 1px 1px 1px 1px;
+border-radius: 5px;
+border-color: #404142;
+background-color: #d2d2d2;
+}
+/* 下拉按钮 */
+QFontComboBox[WidgetStyleClass="SideBarFontPage_FamilyComboBox"]::drop-down,
+QComboBox[WidgetStyleClass="SideBarFontPage_SizeComboBox"]::drop-down{
+min-height: 25px;
+max-height: 25px;
+min-width: 25px;
+max-width: 25px;
+border: none;
+image: url(":/image/down arrow - black.png");
+image-position: center;
+}
+QPushButton[WidgetStyleClass="SideBarFontPage_ColorButton"]{
+min-height: 30px;
+max-height: 30px;
+min-width: 30px;
+max-width: 30px;
+border: none;
+border-radius: 5px;
+background-color: #abacae;
+}
+QPushButton[WidgetStyleClass="SideBarFontPage_FontEditButton"]{
+min-height: 30px;
+max-height: 30px;
+border-style: solid;
+border-radius: 3px;
+border-width: 1px 1px 1px 1px;
+border-color: #404142;
+background-color: #d2d2d2;
+}
+QPushButton[WidgetStyleClass="SideBarFontPage_FontEditButton"]:checked{
+min-height: 30px;
+max-height: 30px;
+border-style:solid;
+border-radius:3px;
+border-width: 1px 1px 1px 1px;
+border-color: #404142;
+background-color: #404142;
+}
+QPushButton#SideBarFontPage_btnTitleBlod,
+QPushButton#SideBarFontPage_btnContentBlod{
+qproperty-icon: url(:/image/bold - black.png) off, url(:/image/bold - white.png) on;
+}
+QPushButton#SideBarFontPage_btnTitleItalics,
+QPushButton#SideBarFontPage_btnContentItalics{
+qproperty-icon: url(:/image/italics - black.png) off, url(:/image/italics - white.png) on;
+}
+QPushButton#SideBarFontPage_btnTitleUnderline,
+QPushButton#SideBarFontPage_btnContentUnderline{
+qproperty-icon: url(:/image/underline - black.png) off, url(:/image/underline - white.png) on;
+}
+/* 侧边栏 布局页面*/
+SideBarLayoutPage{
+qproperty-SiderBarPageBackgroundColor: #d2d2d2;
+}
+QLabel[WidgetStyleClass="SideBarLayoutPage_ChildTitleLabel"]{
+background-color: #d2d2d2;
+color: #404142;
+font: 400 16px "Microsoft YaHei UI";
+}
+QPushButton[WidgetStyleClass="SideBarLayoutPage_AlignButton"]{
+border-style: solid;
+border-radius: 3px;
+border-width: 1px 1px 1px 1px;
+border-color: #404142;
+background-color: #d2d2d2;
+color: #404142;
+font: 400 16px "Microsoft YaHei UI";
+}
+QPushButton[WidgetStyleClass="SideBarLayoutPage_AlignButton"]:checked{
+border-style:solid;
+border-radius:3px;
+border-width: 1px 1px 1px 1px;
+border-color: #404142;
+background-color: #404142;
+color: #ffffff;
+font: 400 14px "Microsoft YaHei UI";
+}
+/* 滑动条 最小高度 */
+QSlider[WidgetStyleClass="SideBarLayoutPage_Slider"]::horizontal{
+min-height: 20px;
+}
+/* 滑动条 槽的高度、圆角半径和背景颜色 */
+QSlider[WidgetStyleClass="SideBarLayoutPage_Slider"]::groove:horizontal{
+height: 4px;
+border-radius: 2px;
+}
+/* 滑动条 滑块的宽度、圆角半径、超出槽上方的高度、超出槽下方的高度 */
+QSlider[WidgetStyleClass="SideBarLayoutPage_Slider"]::handle:horizontal{
+width: 16px;
+border-radius: 8px;
+margin-top: -6px;
+margin-bottom: -6px;
+background-color: #404142;
+}
+/* 滑动条 滑块的宽度、圆角半径、超出槽上方的高度、超出槽下方的高度 */
+QSlider[WidgetStyleClass="SideBarLayoutPage_Slider"]::handle:horizontal:hover{
+width: 16px;
+border-radius: 8px;
+margin-top: -6px;
+margin-bottom: -6px;
+background-color: #404142;
+}
+/* 滑动条 划过的槽的高度、圆角半径和背景颜色 */
+QSlider[WidgetStyleClass="SideBarLayoutPage_Slider"]::sub-page:horizontal{
+height: 4px;
+border-radius: 2px;
+background-color: #404142;
+}
+/* 滑动条 未划过的槽的高度、圆角半径和背景颜色 */
+QSlider[WidgetStyleClass="SideBarLayoutPage_Slider"]::add-page:horizontal{
+height: 4px;
+border-radius: 2px;
+background-color: #7a7a7a;
+}
+/* 值输入框 */
+QSpinBox[WidgetStyleClass="SideBarLayoutPage_SpinBox"]{
+border: none;
+background-color: #d2d2d2;
+color: #404142;
+}
+/* 取消值输入框的上下按钮 */
+QSpinBox[WidgetStyleClass="SideBarLayoutPage_SpinBox"]::up-button,
+QSpinBox[WidgetStyleClass="SideBarLayoutPage_SpinBox"]::down-button{
+width: 0px;
+}
+/* 侧边栏 历史版本页面*/
+SideBarHistoricalPage{
+qproperty-SiderBarPageBackgroundColor: #d2d2d2;
+}
+/* 侧边栏 历史版本页面 垂直滚动条 槽 */
+QScrollArea[WidgetStyleClass="ScrollArea"] QScrollBar:vertical{
+width: 10px;
+padding: 0px;
+background: #d2d2d2;
+}
+/* 垂直滚动条 滑块 */
+QScrollArea[WidgetStyleClass="ScrollArea"] QScrollBar::handle:vertical{
+min-height: 100px;
+border-radius: 5px;
+background: #404142;
+}
+/* 垂直滚动条 滑块 光标悬停 */
+QScrollArea[WidgetStyleClass="ScrollArea"] QScrollBar::handle:vertical:hover{
+background: #ffffff;
+}
+/* 垂直滚动条 滑块 光标按下 */
+QScrollArea[WidgetStyleClass="ScrollArea"] QScrollBar::handle:vertical:pressed{
+background: #ffffff;
+}
+/* 划过的槽 */
+QScrollArea[WidgetStyleClass="ScrollArea"] QScrollBar::sub-page:vertical{
+background: none;
+}
+/* 未划过的槽 */
+QScrollArea[WidgetStyleClass="ScrollArea"] QScrollBar::add-page:vertical{
+background: none;
+}
+/* 在QScrollBar中跳转上一行的按钮 */
+QScrollArea[WidgetStyleClass="ScrollArea"] QScrollBar::sub-line:vertical{
+background: none;
+}
+/* 在QScrollBar中跳转下一行的按钮 */
+QScrollArea[WidgetStyleClass="ScrollArea"] QScrollBar::add-line:vertical{
+background: none;
+}
+/* 历史版本按钮 */
+HistoricalVersionButton{
+qproperty-HistoricalVersionButtonBackgroundColor: #b3b3b3;
+qproperty-HistoricalVersionButtonHoverBackgroundColor: #dceaf6;
+qproperty-HistoricalVersionButtonLineColor: #cdcdcd;
+}
+/* 恢复历史版本对话框 */
+QTextEdit#RestoreHistoricalVersionDialog_tedBackupChapter{
+border: none;
+background-color: #26313e;
+color: #abacae;
+}
+/* 侧边栏 设置页面*/
+SideBarSettingPage{
+qproperty-SiderBarPageBackgroundColor: #d2d2d2;
+}
+QLabel[WidgetStyleClass="SideBarSettingPage_TipLabel"]{
+background-color: #d2d2d2;
+color: #404142;
+font: 400 16px "Microsoft YaHei UI";
+}
+
+

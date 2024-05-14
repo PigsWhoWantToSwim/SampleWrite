@@ -1,0 +1,140 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/add book cover.png</file>
+        <file>image/bold - black.png</file>
+        <file>image/catalogue - black.png</file>
+        <file>image/close window - black.png</file>
+        <file>image/close window - white.png</file>
+        <file>image/circle close.png</file>
+        <file>image/default book cover.png</file>
+        <file>image/down arrow - black.png</file>
+        <file>image/down triangle - black.png</file>
+        <file>image/expanded folder - gray.png</file>
+        <file>image/eye - green.png</file>
+        <file>image/eye - white.png</file>
+        <file>image/folder - gray.png</file>
+        <file>image/folder.png</file>
+        <file>image/font - black.png</file>
+        <file>image/hair mirror - white.png</file>
+        <file>image/history - black.png</file>
+        <file>image/home - green.png</file>
+        <file>image/home - white.png</file>
+        <file>image/icon with text.png</file>
+        <file>image/italics - black.png</file>
+        <file>image/layout - black.png</file>
+        <file>image/left arrow - black.png</file>
+        <file>image/location.png</file>
+        <file>image/maximise window - black.png</file>
+        <file>image/maximise window - white.png</file>
+        <file>image/minimized window - black.png</file>
+        <file>image/minimized window - white.png</file>
+        <file>image/more - gray.png</file>
+        <file>image/named assistant - black.png</file>
+        <file>image/paper - gray.png</file>
+        <file>image/paper - green.png</file>
+        <file>image/question mark - black.png</file>
+        <file>image/question mark.png</file>
+        <file>image/recycle bin - green.png</file>
+        <file>image/recycle bin - white.png</file>
+        <file>image/redo - black.png</file>
+        <file>image/replace - black.png</file>
+        <file>image/restore window - black.png</file>
+        <file>image/restore window - white.png</file>
+        <file>image/settings - black.png</file>
+        <file>image/settings - white.png</file>
+        <file>image/sort - black.png</file>
+        <file>image/sort - white.png</file>
+        <file>image/statistics - black.png</file>
+        <file>image/synchronization - black.png</file>
+        <file>image/theme - black.png</file>
+        <file>image/theme - white.png</file>
+        <file>image/typesetting - black.png</file>
+        <file>image/underline - black.png</file>
+        <file>image/undo - black.png</file>
+        <file>image/up arrow - black.png</file>
+        <file>image/up triangle - black.png</file>
+        <file>image/about - white.png</file>
+        <file>image/find - gray.png</file>
+        <file>image/find - green.png</file>
+        <file>image/home - gray.png</file>
+        <file>image/recycle - gray.png</file>
+        <file>image/recycle - green.png</file>
+        <file>image/settings - gray.png</file>
+        <file>image/settings - green.png</file>
+        <file>image/tick button default image.png</file>
+        <file>image/find - black.png</file>
+        <file>image/home - black.png</file>
+        <file>image/recycle - black.png</file>
+        <file>image/find - blue.png</file>
+        <file>image/home - blue.png</file>
+        <file>image/recycle - blue.png</file>
+        <file>image/settings - blue.png</file>
+        <file>image/recycle - white.png</file>
+        <file>image/find - white.png</file>
+        <file>image/briar.png</file>
+        <file>image/find - gold.png</file>
+        <file>image/home - gold.png</file>
+        <file>image/recycle - gold.png</file>
+        <file>image/settings - gold.png</file>
+        <file>image/blank background - gray.png</file>
+        <file>image/catalogue - white.png</file>
+        <file>image/font - white.png</file>
+        <file>image/history - white.png</file>
+        <file>image/left arrow - white.png</file>
+        <file>image/redo - white.png</file>
+        <file>image/replace - white.png</file>
+        <file>image/typesetting - white.png</file>
+        <file>image/undo - white.png</file>
+        <file>image/layout - white.png</file>
+        <file>image/synchronization - white.png</file>
+        <file>image/icon.png</file>
+        <file>image/catalogue - light green.png</file>
+        <file>image/font - light green.png</file>
+        <file>image/history - light green.png</file>
+        <file>image/layout - light green.png</file>
+        <file>image/left arrow - light green.png</file>
+        <file>image/redo - light green.png</file>
+        <file>image/replace - light green.png</file>
+        <file>image/settings - light green.png</file>
+        <file>image/theme - light green.png</file>
+        <file>image/typesetting - light green.png</file>
+        <file>image/undo - light green.png</file>
+        <file>image/file - gray.png</file>
+        <file>image/file - white.png</file>
+        <file>image/bold - white.png</file>
+        <file>image/italics - white.png</file>
+        <file>image/underline - white.png</file>
+        <file>image/catalogue - gray.png</file>
+        <file>image/left arrow gray.png</file>
+        <file>image/redo - gray.png</file>
+        <file>image/undo - gray.png</file>
+        <file>image/replace - gray.png</file>
+        <file>image/typesetting - gray.png</file>
+        <file>image/font - gray.png</file>
+        <file>image/theme - gray.png</file>
+        <file>image/history - gray.png</file>
+        <file>image/layout - gray.png</file>
+        <file>image/down arrow - white.png</file>
+        <file>image/up arrow - white.png</file>
+        <file>image/blank - white.png</file>
+        <file>image/blank - gray.png</file>
+        <file>image/checkbox_checked - black.png</file>
+        <file>image/checkbox_checked - blue.png</file>
+        <file>image/checkbox_checked - green.png</file>
+        <file>image/checkbox_checked - purple.png</file>
+        <file>image/checkbox_checked - white.png</file>
+        <file>image/checkbox_parcial - black.png</file>
+        <file>image/checkbox_parcial - blue.png</file>
+        <file>image/checkbox_parcial - green.png</file>
+        <file>image/checkbox_parcial - purple.png</file>
+        <file>image/checkbox_parcial - white.png</file>
+        <file>image/checkbox_unchecked - black.png</file>
+        <file>image/checkbox_unchecked - blue.png</file>
+        <file>image/checkbox_unchecked - white.png</file>
+        <file>image/checkbox_unchecked - green.png</file>
+        <file>image/checkbox_unchecked - purple.png</file>
+        <file>image/checkbox_checked - gray.png</file>
+        <file>image/checkbox_parcial - gray.png</file>
+        <file>image/checkbox_unchecked - gray.png</file>
+    </qresource>
+</RCC>
