@@ -14,7 +14,7 @@ void HomeWorkspaceAboutPage::initMemberVariable()
 {
     m_APPVersion = "简单写作 for Windows v0.0.1";
     m_developerInfo = "本软件由  一只想游泳的猪  个人制作";
-    m_APPProjectURL = "https://www.baidu.com/";
+    m_APPProjectURL = "https://github.com/PigsWhoWantToSwim/SampleWrite.git";
 }
 // 初始化 布局
 void HomeWorkspaceAboutPage::initLayout()
