@@ -113,7 +113,7 @@ void HomeWorkspace::do_HomeWorkspacePage_changed(HomeMainWindowPage page)
 
 void HomeWorkspace::do_novelAdded(QString novelID)
 {
-    // m_homePage->do_novelAdded(novelID);
+    m_homePage->do_novelAdded(novelID);
 }
 
 void HomeWorkspace::do_novelEdited(QString novelID)
