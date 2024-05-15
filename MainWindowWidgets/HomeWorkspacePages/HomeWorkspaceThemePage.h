@@ -6,7 +6,7 @@
 #include <QGridLayout>
 #include <QVBoxLayout>
 #include <GlobalClass/AppEnumClass.h>
-#include "GlobalClass/ThemeTickButton.h"
+#include "MainWindowChiMainWindowChi/ThemeTickButton.h/ThemeTickButton.h"
 #include "BasedHomeWorkspacePage.h"
 
 
