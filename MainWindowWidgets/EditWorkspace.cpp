@@ -67,7 +67,6 @@ void EditWorkspace::initConnect()
 
     // 更新历史版本页面
     connect(m_textPage, &TextEditWorkspacePage::updateHistoricalVersionPage, this, [=](){
-        qDebug()<<"中转 更新备份文件 信号";
         emit historicalVersionPage_update();
     });
 }
@@ -166,7 +165,6 @@ void EditWorkspace::do_historicalVersionInfo_init(QString latestVersionID, int b
 // 恢复 历史版本 处理槽函数
 void EditWorkspace::do_historicalVersion_restore(QString filePath)
 {
-    qDebug()<<"接收 中转信号";
     m_textPage->restoreHistoricalVersion(filePath);
 }
 // 撤销

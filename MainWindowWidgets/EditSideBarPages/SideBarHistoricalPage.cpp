@@ -195,7 +195,6 @@ void SideBarHistoricalPage::readSQLDate()
 // 更新 历史版本按钮布局
 void SideBarHistoricalPage::updateButtonArea()
 {
-    qDebug()<<"更新备份文件";
 
     // 释放 历史版本按钮 内存
     deleteAllHistoricalVersionButton();
@@ -269,7 +268,6 @@ void SideBarHistoricalPage::do_historicalVersionButton_DoubleClicked(QString fil
     // 不是取消，确认 恢复
     if(!isCancel)
     {
-        qDebug()<<"发送 恢复信号";
         emit restoreVersion(filePath); // 发送要恢复文件 的文件路径
     }
 }

@@ -320,11 +320,10 @@ void HomeWorkspaceHomePage::do_updateHomePage()
     // 移除所有 回收项
     for(int i=0; i<m_listNovelWidgets.count(); i++)
     {
-        NovelWidget *novleWidget = m_listNovelWidgets.at(0); // 每次获取第一个
+        NovelWidget *novleWidget = m_listNovelWidgets[i]; // 每次获取第一个
 
-        // 移除
+        // 从布局中 移除 小说控件
         m_containerLayout->removeWidget(novleWidget);
-        m_listNovelWidgets.removeAt(0); // 每次移除第一个
 
         if(novleWidget)
         {
@@ -332,6 +331,7 @@ void HomeWorkspaceHomePage::do_updateHomePage()
             novleWidget = nullptr;
         }
     }
+    m_listNovelWidgets.clear();
 
     // 重新读取数据库
     readDataBase();

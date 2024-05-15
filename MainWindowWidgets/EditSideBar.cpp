@@ -100,7 +100,6 @@ void EditSideBar::initConnect()
     });
     // 绑定 历史版本 恢复
     connect(m_historicalPage, &SideBarHistoricalPage::restoreVersion,this,[=](QString filePath){
-        qDebug()<<"中转 恢复信号";
         emit historicalVersion_restore(filePath);
     });
 
@@ -158,7 +157,6 @@ void EditSideBar::do_openChapter(QString openChapterID, QString openChapterTitle
 // 更新 历史版本页面 处理槽函数
 void EditSideBar::do_historicalVersionPage_update()
 {
-    qDebug()<<"接收 更新备份文件 信号";
     m_historicalPage->updateButtonArea();
 }
 

@@ -32,6 +32,7 @@ void HomeWorkspaceRecyclePage::initLayout()
     m_btnClearAll->setObjectName("HomeWorkspaceRecyclePage_btnClear");
     m_btnClearAll->setText("清空回收站");
     m_btnClearAll->setCursor(QCursor(Qt::PointingHandCursor)); // 设置光标
+    m_btnClearAll->setEnabled(false);
     mainLayout->addWidget(m_btnClearAll, 0, 1, 1, 1);
 
     // 第二行 为 回收站
@@ -63,6 +64,10 @@ void HomeWorkspaceRecyclePage::initConnect()
         m_recycleBin->do_recycleBin_clearAll();
     });
     // 绑定 回收站 选中项和项总数
+    // 绑定 回收站 选中项和项总数
+    connect(m_recycleBin, &RecycleBin::totalCount_changed, this, [=](const int totalCount){
+        m_btnClearAll->setEnabled(totalCount > 0);
+    });
     connect(m_recycleBin, &RecycleBin::totalCount_changed, m_recycleStatusBar, &RecycleStatusBar::setTotalCount);
     connect(m_recycleBin, &RecycleBin::selectedCount_changed, m_recycleStatusBar, &RecycleStatusBar::setSelectCount);
     connect(m_recycleBin, &RecycleBin::recycledWork_restored, this, [=](){

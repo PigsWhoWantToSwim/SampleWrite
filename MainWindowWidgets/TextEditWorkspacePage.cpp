@@ -25,7 +25,7 @@ void TextEditWorkspacePage::initMemberVariable()
     m_backupFileCount = 0;
 
     // 布局相关 变量
-    m_firstLineIndent = 20;
+    m_firstLineIndent = 18;
     m_wordSpacing = 0;
     m_lineSpacing = 30;
     m_leftRightMargin = 0;
@@ -208,23 +208,18 @@ void TextEditWorkspacePage::saveAsMainChapterFile()
     // if(m_openChapterID != "") // 关闭时 有章节 被打开
     // {
     // 获取 文本框的全部内容
-    qDebug()<<"获取 文本框内容";
     QString chapterContent = m_tedContent->toPlainText();
-
-    qDebug()<<"打开的文件："<<m_openChapterID;
 
     // 以覆盖的方式 打开 主文件
     QString mainChapterFilePath = QDir::currentPath() + "/Config/LocalChapters/" + m_openChapterID + ".txt";
     QFile mainFile(mainChapterFilePath);
     if(mainFile.open(QIODevice::WriteOnly|QIODevice::Text)) // 文件打开成功
     {
-        qDebug()<<"写入 文件";
         // 以文本流 写入文件
         QTextStream textStreamWrite(&mainFile);
         textStreamWrite << chapterContent; //写入文本
     }
 
-    qDebug()<<"关闭 文件";
     // 关闭文件
     mainFile.close();
     //}
@@ -234,8 +229,6 @@ void TextEditWorkspacePage::saveAsBackupChapterFile()
 {
     // 获取 文本框 当前章节内容
     QString chapterContent = m_tedContent->toPlainText();
-
-    qDebug()<<"最新备份文件："<<m_latestVersionID;
 
     // 获取 最新备份版本 文件路径
     QString latestVersionFilePath = QDir::currentPath() + "/Config/LocalChapters/" + m_latestVersionID + ".txt";
@@ -298,7 +291,7 @@ void TextEditWorkspacePage::saveAsBackupChapterFile()
             if(!sqlQuery.exec())
             {
                 // 执行 sql语句 失败
-                qDebug()<<sqlQuery.lastError();
+                qDebug() << sqlQuery.lastError();
             }
 
             // 更新 最新备份版本ID（虽然会自动更新）
@@ -353,8 +346,6 @@ void TextEditWorkspacePage::saveAsBackupChapterFile()
         // 关闭数据库
         AppDatabase::getInstance()->quit();
 
-
-        qDebug()<<"发送 更新备份文件 信号";
         // 发送 更新备份文件 信号
         emit updateHistoricalVersionPage();
     } 
@@ -390,10 +381,8 @@ void TextEditWorkspacePage::setContentFont(QFont newContentFont,QColor newConten
     m_tedContent->setFont(newContentFont);
     // 设置 内容字体颜色
     // m_tedContent->setTextColor(newContentFontColor); // 不生效
-    m_tedContent->setStyleSheet(QString("color: rgb(%1,%2,%3);")
-                                    .arg(newContentFontColor.red())
-                                    .arg(newContentFontColor.green())
-                                    .arg(newContentFontColor.blue())); // 生效
+    QString newContentFontColorString = converRGB16HexStr(newContentFontColor);
+    m_tedContent->setStyleSheet(QString("color: %1;").arg(newContentFontColorString)); // 生效
 }
 
 // 设置 标题对齐
@@ -781,26 +770,18 @@ void TextEditWorkspacePage::setHistoricalVersionInfo(QString latestVersionID, in
 // 恢复 历史版本 处理槽函数
 void TextEditWorkspacePage::restoreHistoricalVersion(QString filePath)
 {
-    qDebug()<<"开始 处理";
-
-    qDebug()<<"开始 备份";
     // 备份 当前内容
     saveAsBackupChapterFile();
 
-    qDebug()<<"获取 历史版本";
     // 打开历史版本文件
     QFile file(filePath); // 通过文件路径创建文件对象
     file.open(QFile::ReadOnly|QIODevice::Text); // 文件打开方式
     QString textContent = file.readAll(); // 获取历史版本文件中全部字符
     file.close(); // 关闭文件
 
-    qDebug()<<"显示 历史版本内容";
     // 清空 文本框内容
     m_tedContent->clear();
     // 添加到 文本框
-    QString s="hello";
-    qDebug()<<s;
-    qDebug()<<textContent;
     m_tedContent->insertPlainText(textContent);
     // m_tedContent->setText(textContent);
 
@@ -809,10 +790,9 @@ void TextEditWorkspacePage::restoreHistoricalVersion(QString filePath)
     // 设置 初始 底部边距
     setContentBottomMargin(0);
 
-    // 发送 布局信息信号
-    // 首行缩进0，字间距0，行间距30，左右边距0，底部边距0
-
-    qDebug()<<"保存 到主文件";
+    // 初始化 布局 数值 发送 布局信息信号
+    setContentLayout(18, 0, 30, 0, 0);
+    emit contentLayoutValues_init(18, 0, 30, 0, 0);
     // 保存 到主文件
     saveAsMainChapterFile();
 }
