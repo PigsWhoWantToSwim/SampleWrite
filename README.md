@@ -22,7 +22,7 @@
 
 
 
-![主题](https://github.com/PigsWhoWantToSwim/SampleWrite/blob/main/app_theme.png)
+![主题](https://github.com/PigsWhoWantToSwim/SampleWrite/blob/main/02_09_41.png)
 
 
 
