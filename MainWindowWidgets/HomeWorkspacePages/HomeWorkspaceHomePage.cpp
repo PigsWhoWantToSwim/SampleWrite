@@ -383,7 +383,7 @@ void HomeWorkspaceHomePage::do_novelWidget_customContextMenuRequested(const QPoi
     QString novelType = novel->getNovelType();
 
     QMenu *editNovelMenu=new QMenu(m_widContainer);
-    QMenu *exportMenu = new QMenu("导出分卷",editNovelMenu);
+    QMenu *exportMenu = new QMenu("导出作品",editNovelMenu);
 
     // 添加 内容
     editNovelMenu->addAction("修改作品",this,[=](){
